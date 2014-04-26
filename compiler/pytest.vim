@@ -15,13 +15,13 @@ endif
 let s:cpo_save = &cpo
 set cpo-=C
 
-CompilerSet makeprg=py.test\ --tb=short\ -q
+CompilerSet makeprg=py.test\ --tb=short\ -q\ --color=no
 
 CompilerSet errorformat=
-  \%*[_]\ %m\ %*[_],
+  \%-G%*[_]\ %.%#\ %*[_],
   \%A%>%f:%l:\ %.%#,
   \%-Z>%*[\ ]%m,
-  \E%m,
+  \E%[\ ]%#%m,
   \%-G%.%#
 
 let &cpo = s:cpo_save
