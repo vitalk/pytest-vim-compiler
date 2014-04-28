@@ -20,8 +20,8 @@ CompilerSet makeprg=py.test\ --tb=short\ -q\ --color=no
 CompilerSet errorformat=
   \%-G%*[_]\ %.%#\ %*[_],
   \%A%>%f:%l:\ %.%#,
-  \%-Z>%*[\ ]%m,
-  \E%[\ ]%#%m,
+  \%C>%*[\ ]%m,
+  \%ZE%[\ ]%#%m,
   \%-G%.%#
 
 let &cpo = s:cpo_save
